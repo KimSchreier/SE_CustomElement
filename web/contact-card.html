@@ -1,0 +1,80 @@
+<script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="import.html">
+
+
+<polymer-element name="contact-card" attributes="name phone group favored icon on-favorite-tap">
+
+  <template>
+    <style>    
+      :host {
+        position: relative;
+        box-sizing: border-box;
+        margin: 20px;
+        
+      }
+      #card {
+        padding: 20px;
+        background-color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        height: 250px;
+        
+        }
+      
+      #paper_icon_button {
+          color: white;
+          float: right;
+      }
+      .name {
+        font-weight: bold;
+        font-size: 28px;
+        margin-right: 1em;
+        }
+        
+    .phone{
+        font-weight: 200;
+        opacity: 0.8;
+        font-size: 38px;
+        text-align: center;
+        
+        }
+        
+    .group{
+        float: right;
+        font-size: 20px;
+        font-weight: 200;
+        opacity: 0.6;
+
+        }  
+    </style>
+      
+        <div id="card">
+            <paper-shadow id="shadow">
+                <paper-fab icon="" id="paper_icon_button" on-tap="{{favor}}"></paper-fab>
+                    <div style="display: flex"><p class="name"> name </p></div> 
+                    <p class="phone"> phone-number </p>
+                    <div class="group"> group </div>   
+            </paper-shadow>
+        </div>
+    
+  </template>
+
+  <script>
+
+    Polymer('contact-card', {
+        ready: function() {
+            console.log('ready');
+        },
+        favor: function(event, detail, sender){
+            this.asyncFire('favorite-tap');
+        },
+        name: "name-placeholder",
+        phone: "phone number",
+        group: "group-placeholder",
+        favored: "false",
+        icon: "menu"
+          
+            
+    });
+  </script>
+
+</polymer-element>
