@@ -33,7 +33,7 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 > * webcomponentsjs
 
 **/web**
-> * import.html - Summery of all imports that we will need.
+> * import.html - Summary of all imports that we will need.
 > * index.html - main page.
 > * contact-contacts.html - main application, handling of view, data binding, ...
 > * contact-card.html - template for a contact card
@@ -52,3 +52,32 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
    <contact-contacts></contact-contacts>
 </body>
 ```
+
+### 2.3 contact-contacts.html
+
+
+
+#### Import contact-card.html
+
+```html
+<link rel="import" href="contact-card.html">
+```
+
+
+#### Changing Heading
+##### 1. Change: 
+```html
+ <div id="div" tool>Contacts</div>
+```
+to:
+
+```html
+ <div id="div" tool>{{heading}}</div>
+```
+##### 2. add a reference for heading
+```javascript
+ready: function(){
+    this.heading = "All Contacts",
+            
+```
+
