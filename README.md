@@ -33,13 +33,20 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 > * webcomponentsjs
 
 **/web**
-> * import.html
-> * index.html
-> * contact-contacts.html
-> * contact-card.html
+> * import.html - Summery of all imports that we will need.
+> * index.html - main page.
+> * contact-contacts.html - main application, handling of view, data binding, ...
+> * contact-card.html - template for a contact card
 
 
-#### 2.1.1 
+### 2.2 index.html
+ 
+#### Import contact-contacts.html
 
-> 
+> <link rel="import" href="contact-contacts.html">
 
+#### custom tag: contact-contacts
+
+> <body>
+>   <contact-contacts></contact-contacts>
+> </body>
