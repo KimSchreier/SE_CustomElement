@@ -13,7 +13,7 @@ This Repo is for everyone that wants to take part in creating a custom Polymer e
 ##### 1. clone this [Reposetory](https://github.com/KimSchreier/SE_CustomElement.git)
 
 
-###### 2. make a bower update
+##### 2. make a bower update
 
 > $ bower update 
 
