@@ -2,7 +2,7 @@
 <link rel="import" href="import.html">
 
 
-<polymer-element name="contact-card" attributes="name phone group favored icon on-favorite-tap">
+<polymer-element name="contact-card" >
 
   <template>
     <style>    
@@ -47,14 +47,7 @@
         }  
     </style>
       
-        <div id="card">
-            <paper-shadow id="shadow">
-                <paper-fab icon="" id="paper_icon_button" on-tap="{{favor}}"></paper-fab>
-                    <div style="display: flex"><p class="name"> name </p></div> 
-                    <p class="phone"> phone-number </p>
-                    <div class="group"> group </div>   
-            </paper-shadow>
-        </div>
+
     
   </template>
 
@@ -64,15 +57,7 @@
         ready: function() {
             console.log('ready');
         },
-        favor: function(event, detail, sender){
-            this.asyncFire('favorite-tap');
-        },
-        name: "name-placeholder",
-        phone: "phone number",
-        group: "group-placeholder",
-        favored: "false",
-        icon: "menu"
-          
+
             
     });
   </script>

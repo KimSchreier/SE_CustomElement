@@ -95,9 +95,70 @@ ready: function(){
             }
 ```
 
-#### Repeat a Template - Add all contact-card
+#### Repeat a Template - Add all contact-cards
+
+add the following to the div with the id: "all"
 ```html
 <template repeat="{{contact in contacts}}">
      <contact-card></contact-card>
 </template>
 ```
+
+#### Conditional Template - Add favored contact-cards
+
+add the following to the div with the id: "favored"
+```html
+ <template repeat="{{contact in contacts}}" >
+        <template if="{{contact.favored === 'true'}}">
+            </contact-card>
+        </template>
+</template>
+```
+
+### 2.4 contact-card.html
+
+#### The basic Template
+```html
+        <div id="card">
+            <paper-shadow id="shadow">
+                <paper-fab icon="" id="paper_icon_button" on-tap="{{favor}}"></paper-fab>
+                    <div style="display: flex"><p class="name"> name </p></div> 
+                    <p class="phone"> phone-number </p>
+                    <div class="group"> group </div>   
+            </paper-shadow>
+        </div>
+```
+
+#### Attributes of the custom tag
+
+```html
+    <polymer-element name="contact-card" attributes="name phone group favored icon on-favorite-tap">
+```
+
+#### create placeholders for the attributes
+
+by adding this to the Polymer script:
+
+```javascript
+        favor: function(event, detail, sender){
+            this.asyncFire('favorite-tap');
+        },
+        name: "name-placeholder",
+        phone: "phone number",
+        group: "group-placeholder",
+        favored: "false",
+        icon: "menu"
+ ```         
+
+#### Set the attributes by refering to this tag - Data Binding
+
+Now you have to set the attribute values in the contact-contacts.html
+```html
+                        <contact-card name="{{contact.name}}" 
+                                      phone="{{contact.phone}}" 
+                                      group="{{contact.group}}" 
+                                      favored="{{contact.favored}}"  
+                                      icon="{{contact.icon}}"
+                                      on-favorite-tap="{{handleFavorite}}">
+                        </contact-card>
+ ``` 
