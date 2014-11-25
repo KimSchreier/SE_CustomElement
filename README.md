@@ -64,8 +64,9 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 ```
 
 
-#### Changing Heading
-##### 1. Change: 
+#### Data Binding - Changing Heading 
+##### 1. Replace Contacts with {{heading}} 
+
 ```html
  <div id="div" tool>Contacts</div>
 ```
@@ -74,10 +75,21 @@ to:
 ```html
  <div id="div" tool>{{heading}}</div>
 ```
-##### 2. add a reference for heading
+##### 2. Add a default property for heading
 ```javascript
 ready: function(){
-    this.heading = "All Contacts",
-            
+    this.heading = "All Contacts",       
 ```
-
+##### 3. Set the text for your heading in the functions view_all() and view_favorite()
+```javascript
+            this.view_favored = function (){
+                this.$.favored.style.display = 'block';
+                this.$.all.style.display = 'none';
+                this.heading = "Favorite Contacts";
+            },
+            this.view_all = function (){
+                this.$.favored.style.display = 'none';
+                this.$.all.style.display = 'block';
+                this.heading = "All Contacts";
+            }
+```
