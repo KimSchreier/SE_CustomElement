@@ -166,3 +166,33 @@ Now you have to set the attribute values in the contact-contacts.html
 </contact-card>
  ```    
  
+So in the end your content div should look like this:
+```html
+
+<div id="all" >
+    <template repeat="{{contact in contacts}}">
+        <contact-card name="{{contact.name}}" 
+                        phone="{{contact.phone}}" 
+                        group="{{contact.group}}" 
+                        favored="{{contact.favored}}"  
+                        icon="{{contact.icon}}"
+                        on-favorite-tap="{{handleFavorite}}">
+        </contact-card>
+    </template>
+</div>
+
+
+<div id="favored">
+    <template repeat="{{contact in contacts}}" >
+        <template if="{{contact.favored === 'true'}}">
+            <contact-card name="{{contact.name}}" 
+                            phone="{{contact.phone}}" 
+                            group="{{contact.group}}" 
+                            favored="{{contact.favored}}"  
+                            icon="{{contact.icon}}"
+                            on-favorite-tap="{{handleFavorite}}">
+            </contact-card>
+        </template>
+    </template>
+</div>
+ ```     
