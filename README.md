@@ -150,15 +150,17 @@ by adding this to the Polymer script:
         icon: "menu"
  ```         
 
-#### Set the attributes by refering to this tag - Data Binding
+#### Set all attributes where you used contact-card by data binding
 
 Now you have to set the attribute values in the contact-contacts.html
+
 ```html
-                        <contact-card name="{{contact.name}}" 
-                                      phone="{{contact.phone}}" 
-                                      group="{{contact.group}}" 
-                                      favored="{{contact.favored}}"  
-                                      icon="{{contact.icon}}"
-                                      on-favorite-tap="{{handleFavorite}}">
-                        </contact-card>
- ``` 
+<contact-card   name="{{contact.name}}" 
+                phone="{{contact.phone}}" 
+                group="{{contact.group}}" 
+                favored="{{contact.favored}}"  
+                icon="{{contact.icon}}"
+                on-favorite-tap="{{handleFavorite}}">
+</contact-card>
+ ```    
+ 
