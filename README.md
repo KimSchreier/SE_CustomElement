@@ -65,7 +65,8 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 
 
 #### Data Binding - Changing Heading 
-##### 1. Replace Contacts with {{heading}} 
+
+###### 1. Replace Contacts with {{heading}} 
 
 ```html
  <div id="div" tool>Contacts</div>
@@ -75,12 +76,12 @@ to:
 ```html
  <div id="div" tool>{{heading}}</div>
 ```
-##### 2. Add a default property for heading
+###### 2. Add a default property for heading
 ```javascript
 ready: function(){
     this.heading = "All Contacts",       
 ```
-##### 3. Set the text for your heading in the functions view_all() and view_favorite()
+###### 3. Set the text for your heading in the functions view_all() and view_favored()
 ```javascript
             this.view_favored = function (){
                 this.$.favored.style.display = 'block';
@@ -93,3 +94,5 @@ ready: function(){
                 this.heading = "All Contacts";
             }
 ```
+
+#### 
