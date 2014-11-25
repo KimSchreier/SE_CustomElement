@@ -95,4 +95,9 @@ ready: function(){
             }
 ```
 
-#### 
+#### Repeat a Template - Add all contact-card
+```html
+<template repeat="{{contact in contacts}}">
+     <contact-card></contact-card>
+</template>
+```
