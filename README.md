@@ -28,11 +28,11 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 
 ### 2.1 Overview
 
-** /bower_components **
+**/bower_components**
 > * Polymer core and paper elemnts
 > * webcomponentsjs
 
-** /web **
+**/web**
 > * import.html
 > * index.html
 > * contact-contacts.html
