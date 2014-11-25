@@ -42,11 +42,13 @@ I will use [Brackets](http://brackets.io/). But you can take what you want to ed
 ### 2.2 index.html
  
 #### Import contact-contacts.html
-
-> <link rel="import" href="contact-contacts.html">
+```html
+<link rel="import" href="contact-contacts.html">
+```
 
 #### custom tag: contact-contacts
-
-> <body>
->   <contact-contacts></contact-contacts>
-> </body>
+```html
+<body>
+   <contact-contacts></contact-contacts>
+</body>
+```
