@@ -207,4 +207,4 @@ So in the end your content div should look like this:
  
 ## 4. Finished Project
  
-#### You can find the finished Project [here](https://github.com/KimSchreier/SE_Finished)
+#### You can find the finished Project [here](https://github.com/KimSchreier/SE_Finished).
