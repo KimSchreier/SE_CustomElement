@@ -110,7 +110,7 @@ add the following to the div with the id: "favored"
 ```html
  <template repeat="{{contact in contacts}}" >
         <template if="{{contact.favored === 'true'}}">
-            </contact-card>
+            <contact-card></contact-card>
         </template>
 </template>
 ```
@@ -195,4 +195,16 @@ So in the end your content div should look like this:
         </template>
     </template>
 </div>
- ```     
+ ```    
+ 
+ ## 3. Questions and Help
+ 
+ I hope you were able to rebuild the application with the help of this Guide.
+ If something is missing, misspelled, or unclear, notice me please. :)
+ 
+ If you have any further questions, you can contact [me](mailto: kim.schreier@web.de).
+ 
+ 
+ ## 4. Finished Project
+ 
+ #### You can find the finished Project [here](https://github.com/KimSchreier/SE_Finished)
