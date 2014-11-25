@@ -148,7 +148,9 @@ by adding this to the Polymer script:
         group: "group-placeholder",
         favored: "false",
         icon: "menu"
- ```         
+ ```     
+ 
+### 2.5 Finishing Moves
 
 #### Set all attributes where you used contact-card by data binding
 
